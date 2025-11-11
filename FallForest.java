@@ -52,7 +52,7 @@ class Branch {
                 leaves--;
 
                 String message = " ".repeat(level * 2)
-                        + "🍂  A leaf falls from branch level " + level
+                        + " A leaf falls from branch level " + level
                         + " (remaining on this branch: " + leaves + ")";
                 System.out.println(message);
                 log.println(message);
@@ -84,7 +84,7 @@ class Branch {
             leaves++;
 
             String message = " ".repeat(level * 2)
-                    + "🌱  A new leaf grows on branch level " + level
+                    + "  A new leaf grows on branch level " + level
                     + " (total on this branch: " + leaves + ")";
             System.out.println(message);
             log.println(message);
@@ -107,7 +107,7 @@ public class FallForest {
     public static void main(String[] args) {
         try (PrintWriter log = new PrintWriter(new FileWriter("leaf_fall_log.txt"))) {
 
-            String intro = "🍁 The forest prepares for autumn...";
+            String intro = " The forest prepares for autumn...";
             System.out.println(intro);
             log.println(intro);
 
@@ -121,14 +121,14 @@ public class FallForest {
             // AUTUMN: recursive leaf fall
             tree.fallLeaves(0, log);
 
-            String springIntro = "\n🌼 Spring breezes return. The forest begins to regrow...";
+            String springIntro = "\n Spring breezes return. The forest begins to regrow...";
             System.out.println(springIntro);
             log.println(springIntro);
 
             // SPRING: recursive regeneration
             tree.growLeaves(0, 3, log);
 
-            String outro = "\n❄️ The cycle completes; the forest rests, ready for another year.";
+            String outro = "\n The cycle completes; the forest rests, ready for another year.";
             System.out.println(outro);
             log.println(outro);
 
